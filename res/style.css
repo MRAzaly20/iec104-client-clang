@@ -1,0 +1,646 @@
+/* ============================================================================
+ * IEC 104 Client — Dark SCADA Theme
+ *
+ * Professional dark theme inspired by industrial HMI/SCADA systems.
+ * Uses GTK4 CSS selectors. ALL widgets dark — no white anywhere.
+ * ========================================================================= */
+
+/* ---- Global ---- */
+window {
+  background-color: #0f1117;
+  color: #d4d8e0;
+}
+
+/* ---- ALL Entry / Text Inputs ---- */
+entry,
+text {
+  background-color: #1a1d2a;
+  color: #d4d8e0;
+  border: 1px solid #363a4f;
+  border-radius: 4px;
+  padding: 4px 8px;
+  caret-color: #60b0f4;
+  min-height: 28px;
+}
+
+entry:focus,
+text:focus {
+  border-color: #60b0f4;
+  background-color: #1e2134;
+}
+
+/* ---- ALL Dropdowns / ComboBox ---- */
+dropdown,
+combobox,
+dropdown > button,
+combobox > button {
+  background-color: #1a1d2a;
+  color: #d4d8e0;
+  border: 1px solid #363a4f;
+  border-radius: 4px;
+  min-height: 28px;
+}
+
+dropdown:hover,
+combobox:hover {
+  border-color: #4a5070;
+}
+
+dropdown > popover > contents,
+popover > contents {
+  background-color: #1a1d2a;
+  color: #d4d8e0;
+  border: 1px solid #363a4f;
+}
+
+listview,
+listview > row {
+  background-color: #1a1d2a;
+  color: #d4d8e0;
+}
+
+listview > row:selected {
+  background-color: #1e3a5f;
+  color: #60b0f4;
+}
+
+listview > row:hover {
+  background-color: #252836;
+}
+
+/* ---- ALL Buttons (generic) ---- */
+button {
+  background: linear-gradient(to bottom, #252836, #1e2030);
+  color: #b0b8d0;
+  border: 1px solid #363a4f;
+  border-radius: 4px;
+  padding: 4px 8px;
+  min-height: 26px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #303450, #282c44);
+  color: #e0e4f0;
+  border-color: #4a5070;
+}
+
+button:active {
+  background: #1a1c2e;
+}
+
+/* ---- Check Buttons ---- */
+checkbutton {
+  color: #d4d8e0;
+}
+
+checkbutton indicator {
+  background-color: #1a1d2a;
+  border: 1px solid #363a4f;
+  border-radius: 3px;
+}
+
+checkbutton:checked indicator {
+  background-color: #1e3a5f;
+  border-color: #60b0f4;
+}
+
+/* ---- Labels ---- */
+label {
+  color: #d4d8e0;
+}
+
+/* ---- Header Bar ---- */
+headerbar {
+  background: linear-gradient(to bottom, #141620, #0d0f17);
+  border-bottom: 1px solid #2a2d3a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  min-height: 48px;
+  padding: 0 8px;
+}
+
+headerbar .title {
+  color: #e8ecf4;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+headerbar .subtitle {
+  color: #6c7293;
+  font-size: 11px;
+}
+
+/* Window close / min / max buttons — larger hit area */
+headerbar button.close,
+headerbar button.minimize,
+headerbar button.maximize,
+windowcontrols > button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #6c7293;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  margin: 0 2px;
+  font-size: 16px;
+}
+
+headerbar button.close:hover,
+windowcontrols > button.close:hover {
+  background-color: #e64a4a;
+  color: #ffffff;
+  border-color: #e64a4a;
+}
+
+headerbar button.minimize:hover,
+headerbar button.maximize:hover,
+windowcontrols > button.minimize:hover,
+windowcontrols > button.maximize:hover {
+  background-color: #252836;
+  color: #d4d8e0;
+  border-color: #363a4f;
+}
+
+/* Make the icons inside window controls bigger */
+windowcontrols > button > image {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-size: 16px;
+}
+
+/* ---- Toolbar Buttons ---- */
+.toolbar-btn {
+  background: linear-gradient(to bottom, #252836, #1e2030);
+  color: #b0b8d0;
+  border: 1px solid #363a4f;
+  border-radius: 6px;
+  padding: 4px 12px;
+  min-height: 30px;
+  font-size: 12px;
+  transition: all 150ms ease;
+}
+
+.toolbar-btn:hover {
+  background: linear-gradient(to bottom, #303450, #282c44);
+  color: #e0e4f0;
+  border-color: #4a5070;
+}
+
+.toolbar-btn:active {
+  background: #1a1c2e;
+}
+
+.toolbar-btn-connect {
+  background: linear-gradient(to bottom, #1a4a2e, #143d24);
+  color: #4ae68a;
+  border-color: #2a6b42;
+}
+
+.toolbar-btn-connect:hover {
+  background: linear-gradient(to bottom, #1f5635, #18482a);
+  color: #6ef0a8;
+}
+
+.toolbar-btn-disconnect {
+  background: linear-gradient(to bottom, #4a1a1a, #3d1414);
+  color: #e64a4a;
+  border-color: #6b2a2a;
+}
+
+.toolbar-btn-disconnect:hover {
+  background: linear-gradient(to bottom, #561f1f, #481818);
+  color: #f06e6e;
+}
+
+/* Remove button (red X) */
+.btn-remove {
+  background: #3d1414;
+  color: #e64a4a;
+  border: 1px solid #6b2a2a;
+  border-radius: 4px;
+  padding: 2px 8px;
+  min-height: 24px;
+  min-width: 24px;
+  font-weight: 700;
+}
+
+.btn-remove:hover {
+  background: #561f1f;
+  color: #f06e6e;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  background-color: #13151f;
+  border-right: 1px solid #2a2d3a;
+  padding: 4px;
+}
+
+.sidebar-header {
+  color: #6c7293;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 8px 12px 4px 12px;
+}
+
+.sidebar treeview {
+  background-color: transparent;
+  color: #b0b8d0;
+  font-size: 12px;
+}
+
+.sidebar treeview:selected {
+  background-color: #1e3a5f;
+  color: #60b0f4;
+}
+
+.sidebar treeview:hover {
+  background-color: #1a1e30;
+}
+
+.sidebar treeview header button {
+  background-color: #191c28;
+  color: #6c7293;
+  border-bottom: 1px solid #2a2d3a;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* ---- Data Grid ---- */
+.data-grid {
+  background-color: #11131b;
+}
+
+.data-grid treeview {
+  background-color: #11131b;
+  color: #c8cdd8;
+  font-family: "Consolas", "Cascadia Mono", "SF Mono", monospace;
+  font-size: 12px;
+}
+
+.data-grid treeview:selected {
+  background-color: #1e3a5f;
+  color: #ffffff;
+}
+
+.data-grid treeview:hover {
+  background-color: #161a28;
+}
+
+.data-grid treeview header button {
+  background: linear-gradient(to bottom, #1a1d2a, #15171f);
+  color: #7882a4;
+  border-bottom: 2px solid #2a3050;
+  border-right: 1px solid #1f2235;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 8px;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Status Bar ---- */
+.status-bar {
+  background-color: #0d0f15;
+  border-top: 1px solid #2a2d3a;
+  padding: 2px 12px;
+  min-height: 26px;
+}
+
+.status-bar label {
+  font-size: 11px;
+  color: #6c7293;
+}
+
+.status-connected {
+  background-color: #1a4a2e;
+  color: #4ae68a;
+  border-radius: 10px;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid #2a6b42;
+}
+
+.status-disconnected {
+  background-color: #3d1414;
+  color: #e64a4a;
+  border-radius: 10px;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid #6b2a2a;
+}
+
+.status-connecting {
+  background-color: #3d3414;
+  color: #e6c84a;
+  border-radius: 10px;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid #6b5a2a;
+}
+
+/* ---- Log Panel ---- */
+.log-view {
+  background-color: #0a0c12;
+  color: #8890a8;
+  font-family: "Consolas", "Cascadia Mono", monospace;
+  font-size: 11px;
+  padding: 6px;
+}
+
+/* ---- Dialog / Modal Windows ---- */
+dialog,
+window {
+  background-color: #0f1117;
+  color: #d4d8e0;
+}
+
+/* ---- Grid in dialogs ---- */
+grid {
+  background-color: transparent;
+}
+
+grid > label {
+  color: #8890a8;
+}
+
+/* ---- Scrolled Window ---- */
+scrolledwindow {
+  background-color: transparent;
+}
+
+/* ---- Separators & Panes ---- */
+paned > separator {
+  background-color: #2a2d3a;
+  min-width: 2px;
+  min-height: 2px;
+}
+
+separator {
+  background-color: #2a2d3a;
+}
+
+/* ---- Scrollbars ---- */
+scrollbar slider {
+  background-color: #363a4f;
+  border-radius: 4px;
+  min-width: 6px;
+  min-height: 6px;
+}
+
+scrollbar slider:hover {
+  background-color: #4a5070;
+}
+
+scrollbar trough {
+  background-color: #11131b;
+}
+
+/* ---- Tooltips ---- */
+tooltip {
+  background-color: #1e2030;
+  color: #d4d8e0;
+  border: 1px solid #363a4f;
+  border-radius: 6px;
+}
+
+/* ---- Popover menus ---- */
+popover,
+popover > contents {
+  background-color: #1a1d2a;
+  color: #d4d8e0;
+  border: 1px solid #363a4f;
+}
+
+/* ---- Frame (System Commands panel) ---- */
+frame {
+  background-color: #0d0f15;
+  border: 1px solid #2a2d3a;
+  border-radius: 4px;
+}
+
+frame > label,
+frame > border > label {
+  color: #6c7293;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* ---- Ensure no white anywhere ---- */
+* {
+  -gtk-secondary-caret-color: #60b0f4;
+}
+
+/* ============================================================================
+ * Command Control Panel
+ * ========================================================================= */
+.cmd-frame {
+  background-color: #0d1020;
+  border: 1px solid #1e3a5f;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.cmd-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e0e4ec;
+  letter-spacing: 0.5px;
+}
+
+.cmd-badge {
+  background-color: #1a4a8a;
+  color: #7cb8ff;
+  border-radius: 10px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.cmd-target {
+  background-color: #080b14;
+  border: 1px solid #1a1d2a;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+
+.cmd-target-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6c7293;
+  letter-spacing: 1.2px;
+}
+
+.cmd-status-ready {
+  font-size: 11px;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.cmd-ioa {
+  font-family: "Cascadia Code", "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: #60b0f4;
+}
+
+.cmd-range-hint {
+  font-size: 10px;
+  color: #6c7293;
+  font-style: italic;
+}
+
+.cmd-status-result {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* ---- Action Buttons ---- */
+.cmd-btn-on {
+  background-color: #1b5e20;
+  color: #a5d6a7;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.cmd-btn-on:hover {
+  background-color: #2e7d32;
+  color: #c8e6c9;
+}
+
+.cmd-btn-off {
+  background-color: #b71c1c;
+  color: #ef9a9a;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.cmd-btn-off:hover {
+  background-color: #c62828;
+  color: #ffcdd2;
+}
+
+.cmd-btn-indet {
+  background-color: #33691e;
+  color: #c5e1a5;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+.cmd-btn-indet:hover {
+  background-color: #558b2f;
+  color: #dce775;
+}
+
+.cmd-btn-inter {
+  background-color: #e65100;
+  color: #ffcc80;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+.cmd-btn-inter:hover {
+  background-color: #ef6c00;
+  color: #ffe0b2;
+}
+
+.cmd-btn-send {
+  background-color: #0d47a1;
+  color: #90caf9;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px 16px;
+}
+.cmd-btn-send:hover {
+  background-color: #1565c0;
+  color: #bbdefb;
+}
+
+/* ============================================================================
+ * Qualifier of Command (QOC) Reference Panel
+ * ========================================================================= */
+.cmd-qoc {
+  background-color: #080b14;
+  border: 1px solid #1a1d2a;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.cmd-qoc-line {
+  font-family: "Cascadia Code", "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #8a8fb0;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================================================
+ * Section Layout — Headers & Side-by-Side Card Rows
+ * ========================================================================= */
+.section-header {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6c7293;
+  letter-spacing: 1.5px;
+  padding: 4px 0;
+  border-bottom: 1px solid #1e2233;
+  margin-bottom: 2px;
+}
+
+/* ============================================================================
+ * GtkNotebook — Tabbed Interface
+ * ========================================================================= */
+.main-notebook {
+  background-color: #0f1117;
+}
+
+/* Tab bar (the header strip containing all tabs) */
+notebook > header {
+  background: linear-gradient(to bottom, #141620, #0d0f17);
+  border-bottom: 2px solid #1e2233;
+  padding: 0 4px;
+}
+
+notebook > header > tabs {
+  background: transparent;
+}
+
+/* Individual tab buttons */
+notebook > header > tabs > tab {
+  background: transparent;
+  color: #6c7293;
+  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 4px 4px 0 0;
+  padding: 6px 16px;
+  margin: 2px 2px 0 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  min-height: 28px;
+  transition: all 150ms ease;
+}
+
+notebook > header > tabs > tab:hover {
+  background: linear-gradient(to bottom, #1a1d2a, #151827);
+  color: #b0b8d0;
+  border-color: #2a2d3a;
+}
+
+/* Active / selected tab */
+notebook > header > tabs > tab:checked {
+  background: linear-gradient(to bottom, #1a2540, #0f1829);
+  color: #60b0f4;
+  border: 1px solid #1e3a5f;
+  border-bottom: 2px solid #60b0f4;
+}
+
+/* Tab content area */
+notebook > stack {
+  background-color: #0f1117;
+}
+

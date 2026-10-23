@@ -1,0 +1,9 @@
+timestamp,level,message
+20:14:40,INFO,"[SimpleServer] Connecting to 127.0.0.1:2404 …"
+20:14:40,OK,"[SimpleServer] TCP connection opened"
+20:14:40,OK,"[SimpleServer] Connected!"
+20:14:40,INFO,"[SimpleServer] STARTDT_CON received"
+20:14:40,INFO,"[SimpleServer] System ASDU C_IC_NA_1 COT=7"
+20:14:40,INFO,"[SimpleServer] System ASDU C_IC_NA_1 COT=10"
+20:14:40,INFO,"[SimpleServer] System ASDU C_CS_NA_1 COT=7"
+20:14:49,WARN,"[SimpleServer] Connection closed"

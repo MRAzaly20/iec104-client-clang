@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libiec104_core.a CMakeFiles/iec104_core.dir/src/iec104_model.c.obj CMakeFiles/iec104_core.dir/src/iec104_config.c.obj CMakeFiles/iec104_core.dir/src/iec104_log.c.obj CMakeFiles/iec104_core.dir/src/iec104_conn.c.obj CMakeFiles/iec104_core.dir/src/iec104_cmd.c.obj
+C:\msys64\mingw64\bin\ranlib.exe libiec104_core.a

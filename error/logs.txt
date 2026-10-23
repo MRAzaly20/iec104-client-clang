@@ -1,0 +1,151 @@
+
+Administrator@WIN-L3AND9N07U4 MINGW64 /c/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c
+# mingw32-make iec104_client_console
+[ 20%] Built target cjson
+[ 80%] Built target iec104_core
+[ 90%] Building C object CMakeFiles/iec104_client_console.dir/src/main.c.obj
+[100%] Linking C executable iec104_client_console.exe
+[100%] Built target iec104_client_console
+
+Administrator@WIN-L3AND9N07U4 MINGW64 /c/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c
+# ./iec104_client_console.exe ../config/station_config.json
+
+=== IEC 104 Client (C) ΓÇö Console Mode ===
+=== Phase 2: Connection + Protocol     ===
+
+Loading config: ../config/station_config.json
+[CONFIG] Cannot open: ../config/station_config.json
+  Config load failed -- using default.
+
+========================================
+Station: IEC104_Station
+  COA : 1
+  Addr: 127.0.0.1:2404
+  Groups: 6  |  Total points: 55
+    [0] Digital_Inputs        M_SP_NA_1  IOA 100ΓÇô109  (10 pts)  "Single-point status inputs"
+    [1] Double_Points         M_DP_NA_1  IOA 200ΓÇô204  (5 pts)  "Double-point status"
+    [2] Analog_Values         M_ME_NC_1  IOA 300ΓÇô319  (20 pts)  "Floating-point measurements"
+    [3] Counters              M_IT_NA_1  IOA 400ΓÇô404  (5 pts)  "Integrated energy counters"
+    [4] Commands              C_DC_TA_1  IOA 500ΓÇô504  (5 pts)  "Double commands with timestamp"
+    [5] Setpoints             C_SE_NC_1  IOA 600ΓÇô609  (10 pts)  "Floating-point setpoints"
+========================================
+
+Starting connection: IEC104_Station --> 127.0.0.1:2404 (COA=1)
+Press Ctrl+C to quit.
+
+[19:39:39][INFO  ] [IEC104_Station] Connecting to 127.0.0.1:2404 ΓÇª
+
+*** [IEC104_Station] --> CONNECTING ***
+
+[19:39:39][OK    ] [IEC104_Station] TCP connection opened
+
+*** [IEC104_Station] --> CONNECTED ***
+
+[19:39:39][OK    ] [IEC104_Station] Connected!
+Waiting for GI response...
+[19:39:39][INFO  ] [IEC104_Station] STARTDT_CON received
+[19:39:40][INFO  ] [IEC104_Station] System ASDU C_IC_NA_1 COT=7
+[19:39:40][INFO  ] [IEC104_Station] System ASDU C_IC_NA_1 COT=10
+[19:39:40][INFO  ] [IEC104_Station] System ASDU C_CS_NA_1 COT=46
+
+Waiting for spontaneous events (6s)...
+
+========================================
+  COMMAND TEST SEQUENCE
+========================================
+
+--- C_SC_NA_1  Single ON  IOA=4 ---
+[19:39:48][CMD   ] SC IOA=4 state=1 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:48][CMD   ] [IEC104_Station] ACT_CON C_SC_NA_1 COT=46
+--- C_SC_NA_1  Single OFF IOA=5 ---
+[19:39:49][CMD   ] SC IOA=5 state=0 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:49][CMD   ] [IEC104_Station] ACT_CON C_SC_NA_1 COT=46
+--- C_DC_NA_1  Double ON  IOA=6 ---
+[19:39:49][CMD   ] DC IOA=6 dcs=2 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:49][CMD   ] [IEC104_Station] ACT_CON C_DC_NA_1 COT=46
+--- C_DC_NA_1  Double OFF IOA=8 ---
+[19:39:49][CMD   ] DC IOA=8 dcs=1 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:49][CMD   ] [IEC104_Station] ACT_CON C_DC_NA_1 COT=46
+--- C_RC_NA_1  Step HIGHER IOA=7 ---
+[19:39:50][CMD   ] RC IOA=7 step=2 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:50][CMD   ] [IEC104_Station] ACT_CON C_RC_NA_1 COT=46
+--- C_SE_NA_1  Norm=0.75  IOA=9 ---
+[19:39:50][CMD   ] SE_NA IOA=9 val=0.7500 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:50][CMD   ] [IEC104_Station] ACT_CON C_SE_NA_1 COT=46
+--- C_SE_NB_1  Scaled=1234  IOA=10 ---
+[19:39:50][CMD   ] SE_NB IOA=10 val=1234 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:50][CMD   ] [IEC104_Station] ACT_CON C_SE_NB_1 COT=46
+--- C_SE_NC_1  Float=3.14  IOA=11 ---
+[19:39:51][CMD   ] SE_NC IOA=11 val=3.1400 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:51][CMD   ] [IEC104_Station] ACT_CON C_SE_NC_1 COT=46
+--- C_BO_NA_1  Bits=0xDEADBEEF  IOA=12 ---
+[19:39:51][CMD   ] BO IOA=12 val=0xDEADBEEF ΓåÆ OK
+    Result: OK
+
+[19:39:51][CMD   ] [IEC104_Station] ACT_CON C_BO_NA_1 COT=46
+--- C_SC_TA_1  Single ON+time  IOA=13 ---
+[19:39:51][CMD   ] SC_TA IOA=13 state=1 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:51][CMD   ] [IEC104_Station] ACT_CON C_SC_TA_1 COT=46
+--- C_DC_TA_1  Double ON+time  IOA=14 ---
+[19:39:51][CMD   ] DC_TA IOA=14 dcs=2 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:51][CMD   ] [IEC104_Station] ACT_CON C_DC_TA_1 COT=46
+--- C_RC_TA_1  Step LOWER+time  IOA=15 ---
+[19:39:52][CMD   ] RC_TA IOA=15 step=1 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:52][CMD   ] [IEC104_Station] ACT_CON C_RC_TA_1 COT=46
+--- C_SE_TC_1  Float=99.99+time  IOA=18 ---
+[19:39:52][CMD   ] SE_NC_TA IOA=18 val=99.9900 sel=0 ΓåÆ OK
+    Result: OK
+
+[19:39:52][CMD   ] [IEC104_Station] ACT_CON C_SE_TC_1 COT=46
+--- C_CI_NA_1  Counter Interrogation ---
+    Result: OK
+
+[19:39:52][INFO  ] [IEC104_Station] System ASDU C_CI_NA_1 COT=7
+[19:39:52][INFO  ] [IEC104_Station] System ASDU C_CI_NA_1 COT=10
+--- C_CS_NA_1  Clock Sync ---
+    Result: OK
+
+[19:39:53][INFO  ] [IEC104_Station] System ASDU C_CS_NA_1 COT=46
+--- C_RD_NA_1  Read IOA=5 ---
+    Result: OK
+
+[19:39:53][INFO  ] [IEC104_Station] System ASDU C_RD_NA_1 COT=45
+[19:39:53][INFO  ] [IEC104_Station] System ASDU C_RD_NA_1 COT=44
+========================================
+  ALL COMMANDS SENT!
+========================================
+
+Monitoring live data... (Ctrl+C to quit)
+
+
+Shutting down...
+[19:40:06][WARN  ] [IEC104_Station] Connection closed
+
+*** [IEC104_Station] --> DISCONNECTED ***
+
+
+*** [IEC104_Station] --> DISCONNECTED ***
+
+Done.

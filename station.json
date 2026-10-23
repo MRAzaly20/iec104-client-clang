@@ -1,0 +1,57 @@
+{
+	"connections":	[{
+			"name":	"IEC104_Station",
+			"common_address":	1,
+			"server_ip":	"127.0.0.1",
+			"server_port":	2404,
+			"groups":	[{
+					"group_name":	"Auto_M_ME_NC_1",
+					"asdu_type":	"M_ME_NC_1",
+					"start_ioa":	1,
+					"quantity":	1,
+					"description":	"Auto-discovered"
+				}, {
+					"group_name":	"Auto_M_SP_NA_1",
+					"asdu_type":	"M_SP_NA_1",
+					"start_ioa":	1,
+					"quantity":	1,
+					"description":	"Auto-discovered"
+				}, {
+					"group_name":	"Auto_M_DP_NA_1",
+					"asdu_type":	"M_DP_NA_1",
+					"start_ioa":	1,
+					"quantity":	1,
+					"description":	"Auto-discovered"
+				}, {
+					"group_name":	"Auto_M_ME_NA_1",
+					"asdu_type":	"M_ME_NA_1",
+					"start_ioa":	1,
+					"quantity":	1,
+					"description":	"Auto-discovered"
+				}, {
+					"group_name":	"Auto_M_ME_NB_1",
+					"asdu_type":	"M_ME_NB_1",
+					"start_ioa":	1,
+					"quantity":	1,
+					"description":	"Auto-discovered"
+				}]
+		}, {
+			"name":	"Test New",
+			"common_address":	1,
+			"server_ip":	"127.0.0.1",
+			"server_port":	2404,
+			"groups":	[{
+					"group_name":	"Group-1",
+					"asdu_type":	"M_SP_TB_1",
+					"start_ioa":	1,
+					"quantity":	10,
+					"description":	""
+				}, {
+					"group_name":	"2",
+					"asdu_type":	"M_BO_NA_1",
+					"start_ioa":	1,
+					"quantity":	10,
+					"description":	""
+				}]
+		}]
+}

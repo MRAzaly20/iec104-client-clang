@@ -1,0 +1,1 @@
+ libiec104_core.a libcjson.a "C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/../lib60870/lib60870-C/src/liblib60870.a" -lws2_32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

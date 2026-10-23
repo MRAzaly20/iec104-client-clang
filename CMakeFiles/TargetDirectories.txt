@@ -1,0 +1,7 @@
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/cjson.dir
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/iec104_core.dir
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/test_phase1.dir
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/iec104_client_console.dir
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/iec104_client_gui.dir
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/edit_cache.dir
+C:/nexus-project/nexus-api/iiot_gateway_project/services/device_management/protocol/iec104-client-c/CMakeFiles/rebuild_cache.dir

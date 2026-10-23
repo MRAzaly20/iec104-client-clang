@@ -1,0 +1,89 @@
+# mingw32-make -j8
+[ 13%] Built target cjson
+[ 53%] Built target iec104_core
+[ 66%] Built target test_phase1
+[ 73%] Building C object CMakeFiles/iec104_client_console.dir/src/main.c.obj
+[ 93%] Built target iec104_client_gui
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c: In function 'run_command_tests':
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:102:9: error: too few arguments to function 'iec104_cmd_single'; expected 6, have 5
+  102 |     r = iec104_cmd_single(c, 4, true, false, false);
+      |         ^~~~~~~~~~~~~~~~~
+In file included from C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:14:
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:30:18: note: declared here
+   30 | IEC104_CmdResult iec104_cmd_single(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:108:9: error: too few arguments to function 'iec104_cmd_single'; expected 6, have 5
+  108 |     r = iec104_cmd_single(c, 5, false, false, false);
+      |         ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:30:18: note: declared here
+   30 | IEC104_CmdResult iec104_cmd_single(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:114:9: error: too few arguments to function 'iec104_cmd_double'; expected 6, have 5
+  114 |     r = iec104_cmd_double(c, 6, 2, false, false);  /* 2=ON */
+      |         ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:35:18: note: declared here
+   35 | IEC104_CmdResult iec104_cmd_double(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:120:9: error: too few arguments to function 'iec104_cmd_double'; expected 6, have 5
+  120 |     r = iec104_cmd_double(c, 8, 1, false, false);  /* 1=OFF */
+      |         ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:35:18: note: declared here
+   35 | IEC104_CmdResult iec104_cmd_double(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:126:9: error: too few arguments to function 'iec104_cmd_step'; expected 6, have 5
+  126 |     r = iec104_cmd_step(c, 7, 2, false, false);  /* 2=HIGHER */
+      |         ^~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:40:18: note: declared here
+   40 | IEC104_CmdResult iec104_cmd_step(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:132:9: error: too few arguments to function 'iec104_cmd_setpoint_normalized'; expected 6, have 5
+  132 |     r = iec104_cmd_setpoint_normalized(c, 9, 0.75f, false, false);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:45:18: note: declared here
+   45 | IEC104_CmdResult iec104_cmd_setpoint_normalized(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:138:9: error: too few arguments to function 'iec104_cmd_setpoint_scaled'; expected 6, have 5
+  138 |     r = iec104_cmd_setpoint_scaled(c, 10, 1234, false, false);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:50:18: note: declared here
+   50 | IEC104_CmdResult iec104_cmd_setpoint_scaled(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:144:9: error: too few arguments to function 'iec104_cmd_setpoint_float'; expected 6, have 5
+  144 |     r = iec104_cmd_setpoint_float(c, 11, 3.14f, false, false);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:55:18: note: declared here
+   55 | IEC104_CmdResult iec104_cmd_setpoint_float(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:150:9: error: too few arguments to function 'iec104_cmd_bitstring'; expected 4, have 3
+  150 |     r = iec104_cmd_bitstring(c, 12, 0xDEADBEEF);
+      |         ^~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:60:18: note: declared here
+   60 | IEC104_CmdResult iec104_cmd_bitstring(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:158:9: error: too few arguments to function 'iec104_cmd_single'; expected 6, have 5
+  158 |     r = iec104_cmd_single(c, 13, true, false, true);
+      |         ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:30:18: note: declared here
+   30 | IEC104_CmdResult iec104_cmd_single(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:164:9: error: too few arguments to function 'iec104_cmd_double'; expected 6, have 5
+  164 |     r = iec104_cmd_double(c, 14, 2, false, true);
+      |         ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:35:18: note: declared here
+   35 | IEC104_CmdResult iec104_cmd_double(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:170:9: error: too few arguments to function 'iec104_cmd_step'; expected 6, have 5
+  170 |     r = iec104_cmd_step(c, 15, 1, false, true);  /* 1=LOWER */
+      |         ^~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:40:18: note: declared here
+   40 | IEC104_CmdResult iec104_cmd_step(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\main.c:176:9: error: too few arguments to function 'iec104_cmd_setpoint_float'; expected 6, have 5
+  176 |     r = iec104_cmd_setpoint_float(c, 18, 99.99f, false, true);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:\nexus-project\nexus-api\iiot_gateway_project\services\device_management\protocol\iec104-client-c\src\iec104_cmd.h:55:18: note: declared here
+   55 | IEC104_CmdResult iec104_cmd_setpoint_float(IEC104_Connection *c, int ioa,
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+mingw32-make[2]: *** [CMakeFiles\iec104_client_console.dir\build.make:79: CMakeFiles/iec104_client_console.dir/src/main.c.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\Makefile2:196: CMakeFiles/iec104_client_console.dir/all] Error 2
+mingw32-make: *** [Makefile:90: all] Error 2

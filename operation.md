@@ -1,0 +1,9 @@
+In this system, the main principle is that the Circuit Breaker (CB) is the only device permitted to switch under load, while all Disconnectors (DS) may only be operated under no-current conditions. Therefore, any configuration change must always begin by ensuring the CB is in the open position.
+
+Under normal conditions, a single bay may only be connected to a single bus, so that only one of DS-A (Bus-I) or DS-B (Bus-II) may be closed, while the other must be open. This condition is mandatory to prevent direct parallel connection between buses. For the system to operate (be energized), a complete path is required: one of the bus DSs must be in the closed position, DS-C must be closed, and the earthing switch (ES) must be open; only then may the CB be closed.
+
+The standard operating sequence begins from a safe condition (CB open), then selects a bus by closing one of the DSs (A or B), followed by closing DS-C, and finally closing the CB to supply power. For bus switching, the CB must be opened first, then the DS on the source bus is opened, followed by closing the DS on the destination bus, and finally closing the CB again. This sequence must not be violated as it can cause a direct connection between buses.
+
+For maintenance conditions, all equipment must be isolated by opening the CB, opening all DSs, and ensuring there is no voltage before closing the earthing switch. The earthing switch must not be closed while a voltage source is still present.
+
+In summary, the system flow is: open CB → change DS position → close CB, with the additional rules that only one bus path is active, the path must be complete before the CB is closed, and grounding is performed only when the system is completely de-energized. Implement these requirements into the SLD code as operating conditions for the CB and DS in the SLD.

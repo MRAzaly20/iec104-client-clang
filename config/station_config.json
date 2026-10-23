@@ -1,0 +1,82 @@
+{
+  "connections": [
+    {
+      "name": "SimpleServer",
+      "common_address": 47,
+      "server_ip": "127.0.0.1",
+      "server_port": 2404,
+      "groups": [
+        {
+          "group_name": "SinglePoint",
+          "asdu_type": "M_SP_NA_1",
+          "start_ioa": 104,
+          "quantity": 1,
+          "description": "Single-point information"
+        },
+        {
+          "group_name": "SinglePointSeq",
+          "asdu_type": "M_SP_NA_1",
+          "start_ioa": 300,
+          "quantity": 8,
+          "description": "Single-point sequence IOA 300-307"
+        },
+        {
+          "group_name": "DoublePoint",
+          "asdu_type": "M_DP_NA_1",
+          "start_ioa": 1,
+          "quantity": 2,
+          "description": "Double-point information"
+        },
+        {
+          "group_name": "StepPosition",
+          "asdu_type": "M_ST_NA_1",
+          "start_ioa": 3,
+          "quantity": 1,
+          "description": "Step position information"
+        },
+        {
+          "group_name": "Normalized",
+          "asdu_type": "M_ME_NA_1",
+          "start_ioa": 4,
+          "quantity": 1,
+          "description": "Measured value, normalized"
+        },
+        {
+          "group_name": "ShortFloat",
+          "asdu_type": "M_ME_NC_1",
+          "start_ioa": 5,
+          "quantity": 1,
+          "description": "Measured value, short floating point"
+        },
+        {
+          "group_name": "Bitstring",
+          "asdu_type": "M_BO_NA_1",
+          "start_ioa": 500,
+          "quantity": 1,
+          "description": "Bitstring of 32 bits"
+        },
+        {
+          "group_name": "Scaled",
+          "asdu_type": "M_ME_NB_1",
+          "start_ioa": 100,
+          "quantity": 3,
+          "description": "Measured value, scaled (IOA 100-102)"
+        },
+        {
+          "group_name": "ScaledTS",
+          "asdu_type": "M_ME_TE_1",
+          "start_ioa": 7,
+          "quantity": 1,
+          "description": "Measured value, scaled + CP56Time2a"
+        },
+        {
+          "group_name": "PeriodicScaled",
+          "asdu_type": "M_ME_NB_1",
+          "start_ioa": 110,
+          "quantity": 1,
+          "description": "Periodic scaled value from server"
+        }
+      ]
+    }
+  ]
+}
